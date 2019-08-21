@@ -1,4 +1,4 @@
-name: Dart CI 30
+name: dotnet-30
 
 on: [push]
 
@@ -13,12 +13,8 @@ jobs:
       with:
         flutter-version: '1.7.8+hotfix.4'
 
-    - name: Env
-      env:
-        folder: dart-30
-
     - name: Install dependencies
-      run: (cd $folder; flutter pub get)
+      run: (cd dart-d30; flutter pub get)
 
     - name: Run tests
-      run: (cd $folder; flutter pub run test)
+      run: (cd dart-d30; flutter pub run test)

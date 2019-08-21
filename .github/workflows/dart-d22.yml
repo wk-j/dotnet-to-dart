@@ -1,4 +1,4 @@
-name: Dart CI 22
+name: dotnet-22
 
 on: [push]
 
@@ -13,12 +13,8 @@ jobs:
       with:
         flutter-version: '1.7.8+hotfix.4'
 
-    - name: Env
-      env:
-        folder: dart-22
-
     - name: Install dependencies
-      run: (cd $folder; flutter pub get)
+      run: (cd dart-d22; flutter pub get)
 
     - name: Run tests
-      run: (cd $folder; flutter pub run test)
+      run: (cd dart-d22; flutter pub run test)
