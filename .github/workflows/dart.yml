@@ -4,22 +4,17 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
     - uses: actions/checkout@v1
 
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.7.8+hotfix.4'
 
-    - name: Cd
-      run: cd dart
-
     - name: Install dependencies
-      run: flutter pub get
+      run: (cd dart; flutter pub get)
 
     - name: Run tests
-      run: flutter pub run test
+      run: (cd dart; flutter pub run test)
