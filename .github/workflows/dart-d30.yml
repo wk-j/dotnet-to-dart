@@ -1,0 +1,24 @@
+name: Dart CI 30
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.7.8+hotfix.4'
+
+    - name: Env
+      env:
+        folder: dart-30
+
+    - name: Install dependencies
+      run: (cd $folder; flutter pub get)
+
+    - name: Run tests
+      run: (cd $folder; flutter pub run test)

@@ -1,25 +1,19 @@
 ## .NET to Dart
 
-*.NET*
+Reproduce swagger to dart bug (src/W22.csproj)
+
+*Service*
+
 ```bash
-dotnet run --project dotnet/MyWeb/MyWeb.csproj
-open http://localhost:5000/swagger
-wget http://localhost:5000/swagger/v1/swagger.json
+dotnet run --project dotnet/MyWeb/MyWeb.csproj --urls "http://*:5000"
+dotnet run --project dotnet/W22/W22.csproj  --urls "http://*:8000"
 ```
 
 *Generate*
 
 ```bash
-echo README.md  >> .openapi-generator-ignore
-echo .gitignore >> .openapi-generator-ignore
-
 brew install openapi-generator
 
-openapi-generator generate \
-    -i swagger.json \
-    -g dart \
-    -c config.json \
-    -o dart
-
-sh generate.sh
+sh generate-22.sh
+sh generate-30.sh
 ```
