@@ -10,15 +10,19 @@ wget http://localhost:5000/swagger/v1/swagger.json
 *Generate*
 
 ```bash
-echo README.md  > .openapi-generator-ignore
+echo README.md  >> .openapi-generator-ignore
+echo .gitignore >> .openapi-generator-ignore
+
+brew install openapi-generator
 
 openapi-generator generate \
     -i https://petstore.swagger.io/v2/swagger.json \
     -g dart \
     -c config.json \
     --additional-properties hideGenerationTimestamp=true,browserClient=false \
-    -o .
+    -o dart
 
+cd dart
 pub get
 pub run test
 ```
