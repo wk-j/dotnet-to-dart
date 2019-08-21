@@ -1,6 +1,6 @@
 ## .NET to Dart
 
-Reproduce swagger to dart bug (src/W22.csproj)
+Reproduce swagger to dart bug ([src/W22/W22.csproj](https://github.com/wk-j/dotnet-to-dart/runs/199556091))
 
 *Service*
 
