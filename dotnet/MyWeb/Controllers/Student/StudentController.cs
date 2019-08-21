@@ -16,12 +16,25 @@ namespace MyWeb.Controllers.Student {
         public Height Height { set; get; }
     }
 
+    public class Query {
+        public string Name { set; get; }
+    }
+
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class StudentController : ControllerBase {
 
         [HttpGet]
         public ActionResult<List<Student>> GetStudents() {
+            return new List<Student> {
+                new Student(),
+                new Student(),
+                new Student()
+            };
+        }
+
+        [HttpPost]
+        public ActionResult<List<Student>> Query([FromBody]Query query) {
             return new List<Student> {
                 new Student(),
                 new Student(),

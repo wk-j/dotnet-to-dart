@@ -12,16 +12,11 @@ part 'auth/api_key_auth.dart';
 part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 
-part 'api/pet_api.dart';
-part 'api/store_api.dart';
-part 'api/user_api.dart';
+part 'api/student_api.dart';
+part 'api/values_api.dart';
 
-part 'model/api_response.dart';
-part 'model/category.dart';
-part 'model/order.dart';
-part 'model/pet.dart';
-part 'model/tag.dart';
-part 'model/user.dart';
+part 'model/query.dart';
+part 'model/student.dart';
 
 
 ApiClient defaultApiClient = ApiClient();

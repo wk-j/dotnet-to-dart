@@ -16,12 +16,10 @@ echo .gitignore >> .openapi-generator-ignore
 brew install openapi-generator
 
 openapi-generator generate \
-    -i https://petstore.swagger.io/v2/swagger.json \
+    -i swagger.json \
     -g dart \
     -c config.json \
     -o dart
 
-cd dart
-pub get
-pub run test
+sh generate.sh
 ```

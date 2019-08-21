@@ -18,10 +18,8 @@ class ApiClient {
   final _regList = RegExp(r'^List<(.*)>$');
   final _regMap = RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath = "https://petstore.swagger.io/v2"}) {
+  ApiClient({this.basePath = "http://localhost"}) {
     // Setup authentications (key: authentication name, value: authentication).
-    _authentications['api_key'] = ApiKeyAuth("header", "api_key");
-    _authentications['petstore_auth'] = OAuth();
   }
 
   void addDefaultHeader(String key, String value) {
@@ -39,18 +37,10 @@ class ApiClient {
           return value is bool ? value : '$value'.toLowerCase() == 'true';
         case 'double':
           return value is double ? value : double.parse('$value');
-        case 'ApiResponse':
-          return ApiResponse.fromJson(value);
-        case 'Category':
-          return Category.fromJson(value);
-        case 'Order':
-          return Order.fromJson(value);
-        case 'Pet':
-          return Pet.fromJson(value);
-        case 'Tag':
-          return Tag.fromJson(value);
-        case 'User':
-          return User.fromJson(value);
+        case 'Query':
+          return Query.fromJson(value);
+        case 'Student':
+          return Student.fromJson(value);
         default:
           {
             Match match;

@@ -1,4 +1,4 @@
-# kd.model.Pet
+# kd.model.Student
 
 ## Load the model package
 ```dart
@@ -9,11 +9,9 @@ import 'package:kd/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [default to null]
-**category** | [**Category**](Category.md) |  | [optional] [default to null]
-**name** | **String** |  | [default to null]
-**photoUrls** | **List&lt;String&gt;** |  | [default to []]
-**tags** | [**List&lt;Tag&gt;**](Tag.md) |  | [optional] [default to []]
-**status** | **String** | pet status in the store | [optional] [default to null]
+**firstName** | **String** |  | [optional] [default to null]
+**lastName** | **String** |  | [optional] [default to null]
+**height** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
